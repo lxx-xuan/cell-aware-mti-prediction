@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520"
+     font-family="Helvetica, Arial, sans-serif" font-size="11">
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="3"
+            orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="520" fill="white"/>
+
+  <!-- ===== title ===== -->
+  <text x="30" y="32" font-size="15" font-weight="700" fill="#222">
+    (a) Three-axis hold-out protocol
+  </text>
+  <text x="30" y="50" font-size="10" fill="#666">
+    The 3 axes (UTR / miRNA / cell) × 2 states (seen / unseen) define 8 octants;
+    7 of these are used as evaluation sets. Cell color = V3 full PR-AUC.
+  </text>
+
+  <!-- ===== Cell-seen panel (left) ===== -->
+  <text x="180" y="100" font-size="12" font-weight="700" fill="#222" text-anchor="middle">
+    Cell — SEEN in training
+  </text>
+  <text x="60" y="140" font-size="10" font-weight="700" fill="#444"
+        text-anchor="middle" transform="rotate(-90, 60, 240)">
+    UTR axis
+  </text>
+  <text x="180" y="135" font-size="10" font-weight="700" fill="#444"
+        text-anchor="middle">
+    miRNA axis
+  </text>
+
+  <!-- column headers -->
+  <text x="135" y="160" font-size="10" fill="#666" text-anchor="middle">miRNA seen</text>
+  <text x="235" y="160" font-size="10" fill="#666" text-anchor="middle">miRNA unseen</text>
+  <!-- row labels -->
+  <text x="80" y="200" font-size="10" fill="#666" text-anchor="end">UTR seen</text>
+  <text x="80" y="280" font-size="10" fill="#666" text-anchor="end">UTR unseen</text>
+
+  <!-- (s, s, s) test_triple : PR-AUC 0.97 (dark green) -->
+  <rect x="85" y="170" width="100" height="70" rx="6"
+        fill="#1A9850" stroke="#222" stroke-width="1"/>
+  <text x="135" y="195" font-size="10" font-weight="700" fill="white" text-anchor="middle">test_triple</text>
+  <text x="135" y="212" font-size="10" fill="white" text-anchor="middle">(all seen)</text>
+  <text x="135" y="230" font-size="12" font-weight="700" fill="white" text-anchor="middle">0.97</text>
+
+  <!-- (s, u, s) test_mirna_holdout : 0.97 (dark green) -->
+  <rect x="185" y="170" width="100" height="70" rx="6"
+        fill="#1A9850" stroke="#222" stroke-width="1"/>
+  <text x="235" y="195" font-size="10" font-weight="700" fill="white" text-anchor="middle">test_mirna</text>
+  <text x="235" y="212" font-size="10" fill="white" text-anchor="middle">_holdout</text>
+  <text x="235" y="230" font-size="12" font-weight="700" fill="white" text-anchor="middle">0.97</text>
+
+  <!-- (u, s, s) test_utr_holdout : 0.24 (red) -->
+  <rect x="85" y="250" width="100" height="70" rx="6"
+        fill="#D73027" stroke="#222" stroke-width="1"/>
+  <text x="135" y="275" font-size="10" font-weight="700" fill="white" text-anchor="middle">test_utr</text>
+  <text x="135" y="292" font-size="10" fill="white" text-anchor="middle">_holdout</text>
+  <text x="135" y="310" font-size="12" font-weight="700" fill="white" text-anchor="middle">0.24</text>
+
+  <!-- (u, u, s) pair_holdout : not evaluated -->
+  <rect x="185" y="250" width="100" height="70" rx="6"
+        fill="#F4F4F4" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="235" y="280" font-size="10" fill="#888" text-anchor="middle">UTR + miRNA</text>
+  <text x="235" y="295" font-size="10" fill="#888" text-anchor="middle">both unseen</text>
+  <text x="235" y="312" font-size="9" font-style="italic" fill="#888" text-anchor="middle">(not evaluated)</text>
+
+  <!-- ===== Cell-unseen panel (right) ===== -->
+  <text x="540" y="100" font-size="12" font-weight="700" fill="#222" text-anchor="middle">
+    Cell — UNSEEN in training (4 cell types held out)
+  </text>
+  <!-- column headers -->
+  <text x="495" y="160" font-size="10" fill="#666" text-anchor="middle">miRNA seen</text>
+  <text x="595" y="160" font-size="10" fill="#666" text-anchor="middle">miRNA unseen</text>
+  <!-- row labels -->
+  <text x="440" y="200" font-size="10" fill="#666" text-anchor="end">UTR seen</text>
+  <text x="440" y="280" font-size="10" fill="#666" text-anchor="end">UTR unseen</text>
+
+  <!-- (s, s, u) test_cell_holdout : 0.77 (light green) -->
+  <rect x="445" y="170" width="100" height="70" rx="6"
+        fill="#66BD63" stroke="#222" stroke-width="1"/>
+  <text x="495" y="195" font-size="10" font-weight="700" fill="white" text-anchor="middle">test_cell</text>
+  <text x="495" y="212" font-size="10" fill="white" text-anchor="middle">_holdout</text>
+  <text x="495" y="230" font-size="12" font-weight="700" fill="white" text-anchor="middle">0.77</text>
+
+  <!-- (s, u, u) test_mirna_x_cell_holdout : 0.75 (light green) -->
+  <rect x="545" y="170" width="100" height="70" rx="6"
+        fill="#66BD63" stroke="#222" stroke-width="1"/>
+  <text x="595" y="195" font-size="10" font-weight="700" fill="white" text-anchor="middle">test_mirna</text>
+  <text x="595" y="212" font-size="10" fill="white" text-anchor="middle">× cell</text>
+  <text x="595" y="230" font-size="12" font-weight="700" fill="white" text-anchor="middle">0.75</text>
+
+  <!-- (u, s, u) test_utr_x_cell_holdout : 0.24 (red) -->
+  <rect x="445" y="250" width="100" height="70" rx="6"
+        fill="#D73027" stroke="#222" stroke-width="1"/>
+  <text x="495" y="275" font-size="10" font-weight="700" fill="white" text-anchor="middle">test_utr</text>
+  <text x="495" y="292" font-size="10" fill="white" text-anchor="middle">× cell</text>
+  <text x="495" y="310" font-size="12" font-weight="700" fill="white" text-anchor="middle">0.24</text>
+
+  <!-- (u, u, u) test_pair_x_cell_holdout : 0.75 (light green) -->
+  <rect x="545" y="250" width="100" height="70" rx="6"
+        fill="#66BD63" stroke="#222" stroke-width="1"/>
+  <text x="595" y="275" font-size="10" font-weight="700" fill="white" text-anchor="middle">test_pair</text>
+  <text x="595" y="292" font-size="10" fill="white" text-anchor="middle">× cell</text>
+  <text x="595" y="310" font-size="12" font-weight="700" fill="white" text-anchor="middle">0.75</text>
+
+  <!-- ===== Colorbar legend ===== -->
+  <g transform="translate(700, 170)">
+    <text x="0" y="0" font-size="10" font-weight="700" fill="#222">V3 full PR-AUC</text>
+
+    <rect x="0" y="15" width="22" height="18" fill="#1A9850" stroke="#222"/>
+    <text x="30" y="28" font-size="10" fill="#222">≥ 0.85</text>
+
+    <rect x="0" y="38" width="22" height="18" fill="#66BD63" stroke="#222"/>
+    <text x="30" y="51" font-size="10" fill="#222">0.50 – 0.85</text>
+
+    <rect x="0" y="61" width="22" height="18" fill="#FDAE61" stroke="#222"/>
+    <text x="30" y="74" font-size="10" fill="#222">0.30 – 0.50</text>
+
+    <rect x="0" y="84" width="22" height="18" fill="#D73027" stroke="#222"/>
+    <text x="30" y="97" font-size="10" fill="#222">≤ 0.30 (≈ random)</text>
+
+    <rect x="0" y="107" width="22" height="18" fill="#F4F4F4" stroke="#999"
+          stroke-dasharray="3,2"/>
+    <text x="30" y="120" font-size="10" fill="#222" font-style="italic">not evaluated</text>
+  </g>
+
+  <!-- ===== Bottom takeaway box ===== -->
+  <g transform="translate(40, 380)">
+    <rect x="0" y="0" width="820" height="110" rx="6"
+          fill="#FFF8E1" stroke="#F4C430" stroke-width="1.2"/>
+    <text x="20" y="22" font-size="11" font-weight="700" fill="#7A5C00">Key observation</text>
+    <text x="20" y="44" font-size="10.5" fill="#222">
+      The 8 octants partition into two strikingly different regimes:
+    </text>
+    <text x="20" y="62" font-size="10.5" fill="#222">
+      • &#8197;<tspan font-weight="700">Octants with UTR seen</tspan> (4 of them, top row) → PR-AUC ≥ 0.75 — model exploits memorized
+      per-UTR baseline tendency.
+    </text>
+    <text x="20" y="80" font-size="10.5" fill="#222">
+      • &#8197;<tspan font-weight="700">Octants with UTR unseen</tspan> (3 evaluated, bottom row) → PR-AUC ≈ 0.24 — model
+      collapses to near random.
+    </text>
+    <text x="20" y="98" font-size="10.5" fill="#222">
+      This sharp dichotomy is the empirical signature of the &#8220;UTR-encoder shortcut&#8221; analysed in §4.2.
+    </text>
+  </g>
+</svg>

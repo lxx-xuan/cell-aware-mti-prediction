@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1050" font-family="Helvetica, Arial, sans-serif" font-size="11">
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#333"/>
+    </marker>
+    <marker id="arrRed" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#D32F2F"/>
+    </marker>
+  </defs>
+
+  <rect width="1500" height="1050" fill="white"/>
+
+  <!-- ============== PANEL A TITLE ============== -->
+  <text x="30" y="38" font-size="17" font-weight="700" fill="#222">(A) Input Encoding</text>
+
+  <!-- ============== SEQUENCE VIEW ============== -->
+  <!-- yellow seed highlight background (cols 7-13, 7 nt seed) -->
+  <rect x="195" y="68" width="161" height="200" fill="#FFF4CC" rx="2"/>
+
+  <!-- position numbers (top) -->
+  <g font-size="9" fill="#2E78C4" text-anchor="middle">
+    <text x="92" y="82">1</text><text x="115" y="82">2</text><text x="138" y="82">3</text>
+    <text x="161" y="82">4</text><text x="184" y="82">5</text><text x="207" y="82">6</text>
+    <text x="230" y="82">7</text><text x="253" y="82">8</text><text x="276" y="82">9</text>
+    <text x="299" y="82">10</text><text x="322" y="82">11</text><text x="345" y="82">12</text>
+    <text x="368" y="82">13</text><text x="391" y="82">14</text><text x="414" y="82">15</text>
+    <text x="437" y="82">16</text><text x="460" y="82">17</text><text x="483" y="82">18</text>
+    <text x="506" y="82">19</text><text x="529" y="82">20</text>
+    <text x="610" y="82">24</text><text x="633" y="82">25</text><text x="656" y="82">26</text>
+  </g>
+
+  <!-- UTR backbone line + ticks (3' left, 5' right) -->
+  <text x="40" y="103" font-size="12" font-weight="700" fill="#222">UTR</text>
+  <text x="74" y="103" font-size="10" fill="#D32F2F">3'</text>
+  <line x1="88" y1="100" x2="668" y2="100" stroke="#D32F2F" stroke-width="1.6"/>
+  <text x="674" y="103" font-size="10" fill="#D32F2F">5'</text>
+  <g stroke="#D32F2F" stroke-width="1.4">
+    <line x1="92" y1="100" x2="92" y2="116"/><line x1="115" y1="100" x2="115" y2="116"/>
+    <line x1="138" y1="100" x2="138" y2="116"/><line x1="161" y1="100" x2="161" y2="116"/>
+    <line x1="184" y1="100" x2="184" y2="116"/><line x1="207" y1="100" x2="207" y2="116"/>
+    <line x1="230" y1="100" x2="230" y2="116"/><line x1="253" y1="100" x2="253" y2="116"/>
+    <line x1="276" y1="100" x2="276" y2="116"/><line x1="299" y1="100" x2="299" y2="116"/>
+    <line x1="322" y1="100" x2="322" y2="116"/><line x1="345" y1="100" x2="345" y2="116"/>
+    <line x1="368" y1="100" x2="368" y2="116"/><line x1="391" y1="100" x2="391" y2="116"/>
+    <line x1="414" y1="100" x2="414" y2="116"/><line x1="437" y1="100" x2="437" y2="116"/>
+    <line x1="460" y1="100" x2="460" y2="116"/><line x1="483" y1="100" x2="483" y2="116"/>
+    <line x1="506" y1="100" x2="506" y2="116"/><line x1="529" y1="100" x2="529" y2="116"/>
+    <line x1="610" y1="100" x2="610" y2="116"/><line x1="633" y1="100" x2="633" y2="116"/>
+    <line x1="656" y1="100" x2="656" y2="116"/>
+  </g>
+  <!-- UTR letters below ticks -->
+  <g font-family="'Courier New', monospace" font-size="12" font-weight="700" fill="#D32F2F" text-anchor="middle">
+    <text x="92" y="132">G</text><text x="115" y="132">G</text><text x="138" y="132">A</text>
+    <text x="161" y="132">G</text><text x="184" y="132">A</text><text x="207" y="132">C</text>
+    <text x="230" y="132">G</text><text x="253" y="132">C</text><text x="276" y="132">U</text>
+    <text x="299" y="132">A</text><text x="322" y="132">G</text><text x="345" y="132">G</text>
+    <text x="368" y="132">U</text><text x="391" y="132">U</text><text x="414" y="132">G</text>
+    <text x="437" y="132">C</text><text x="460" y="132">G</text><text x="483" y="132">U</text>
+    <text x="506" y="132">U</text><text x="529" y="132">C</text>
+    <text x="610" y="132">U</text><text x="633" y="132">G</text><text x="656" y="132">C</text>
+  </g>
+
+  <!-- dots between visible region and end -->
+  <text x="569" y="135" font-size="14" font-weight="700" fill="#888" text-anchor="middle">···</text>
+  <text x="569" y="105" font-size="14" font-weight="700" fill="#888" text-anchor="middle">···</text>
+
+  <!-- pairing bars (seed cols 7-13) -->
+  <g stroke="#2E78C4" stroke-width="1.4">
+    <line x1="230" y1="145" x2="230" y2="195"/>
+    <line x1="253" y1="145" x2="253" y2="195"/>
+    <line x1="276" y1="145" x2="276" y2="195"/>
+    <line x1="299" y1="145" x2="299" y2="195"/>
+    <line x1="322" y1="145" x2="322" y2="195"/>
+    <line x1="345" y1="145" x2="345" y2="195"/>
+    <line x1="368" y1="145" x2="368" y2="195"/>
+  </g>
+
+  <!-- miRNA letters -->
+  <g font-family="'Courier New', monospace" font-size="12" font-weight="700" fill="#222" text-anchor="middle">
+    <text x="92" y="212">U</text><text x="115" y="212">G</text><text x="138" y="212">A</text>
+    <text x="161" y="212">G</text><text x="184" y="212">G</text><text x="207" y="212">U</text>
+    <text x="230" y="212">A</text><text x="253" y="212">G</text><text x="276" y="212">U</text>
+    <text x="299" y="212">U</text><text x="322" y="212">C</text><text x="345" y="212">C</text>
+    <text x="368" y="212">A</text><text x="391" y="212">A</text><text x="414" y="212">C</text>
+    <text x="437" y="212">G</text><text x="460" y="212">A</text><text x="483" y="212">G</text>
+    <text x="506" y="212">G</text><text x="529" y="212">U</text>
+    <text x="610" y="212">U</text><text x="633" y="212">A</text><text x="656" y="212">U</text>
+  </g>
+  <text x="569" y="212" font-size="14" font-weight="700" fill="#888" text-anchor="middle">···</text>
+
+  <!-- miRNA backbone line + ticks (5' left, 3' right) -->
+  <g stroke="#222" stroke-width="1.4">
+    <line x1="92" y1="226" x2="92" y2="242"/><line x1="115" y1="226" x2="115" y2="242"/>
+    <line x1="138" y1="226" x2="138" y2="242"/><line x1="161" y1="226" x2="161" y2="242"/>
+    <line x1="184" y1="226" x2="184" y2="242"/><line x1="207" y1="226" x2="207" y2="242"/>
+    <line x1="230" y1="226" x2="230" y2="242"/><line x1="253" y1="226" x2="253" y2="242"/>
+    <line x1="276" y1="226" x2="276" y2="242"/><line x1="299" y1="226" x2="299" y2="242"/>
+    <line x1="322" y1="226" x2="322" y2="242"/><line x1="345" y1="226" x2="345" y2="242"/>
+    <line x1="368" y1="226" x2="368" y2="242"/><line x1="391" y1="226" x2="391" y2="242"/>
+    <line x1="414" y1="226" x2="414" y2="242"/><line x1="437" y1="226" x2="437" y2="242"/>
+    <line x1="460" y1="226" x2="460" y2="242"/><line x1="483" y1="226" x2="483" y2="242"/>
+    <line x1="506" y1="226" x2="506" y2="242"/><line x1="529" y1="226" x2="529" y2="242"/>
+    <line x1="610" y1="226" x2="610" y2="242"/><line x1="633" y1="226" x2="633" y2="242"/>
+    <line x1="656" y1="226" x2="656" y2="242"/>
+  </g>
+  <text x="40" y="245" font-size="12" font-weight="700" fill="#222">miRNA</text>
+  <text x="74" y="245" font-size="10" fill="#222">5'</text>
+  <line x1="88" y1="242" x2="668" y2="242" stroke="#222" stroke-width="1.6"/>
+  <text x="674" y="245" font-size="10" fill="#222">3'</text>
+
+  <!-- position numbers (bottom) -->
+  <g font-size="9" fill="#2E78C4" text-anchor="middle">
+    <text x="92" y="260">1</text><text x="115" y="260">2</text><text x="138" y="260">3</text>
+    <text x="161" y="260">4</text><text x="184" y="260">5</text><text x="207" y="260">6</text>
+    <text x="230" y="260">7</text><text x="253" y="260">8</text><text x="276" y="260">9</text>
+    <text x="299" y="260">10</text><text x="322" y="260">11</text><text x="345" y="260">12</text>
+    <text x="368" y="260">13</text><text x="391" y="260">14</text><text x="414" y="260">15</text>
+    <text x="437" y="260">16</text><text x="460" y="260">17</text><text x="483" y="260">18</text>
+    <text x="506" y="260">19</text><text x="529" y="260">20</text>
+    <text x="610" y="260">24</text><text x="633" y="260">25</text><text x="656" y="260">26</text>
+  </g>
+
+  <!-- bracket + label "any-7mer seed match" -->
+  <path d="M 220 278 L 220 285 L 378 285 L 378 278" fill="none" stroke="#333" stroke-width="1"/>
+  <line x1="299" y1="285" x2="299" y2="293" stroke="#333" stroke-width="1"/>
+  <text x="299" y="305" font-size="11" fill="#222" text-anchor="middle">any-7mer seed match</text>
+
+  <!-- Down arrow to matrix -->
+  <line x1="370" y1="320" x2="370" y2="358" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ============== ONE-HOT MATRIX ============== -->
+  <!-- yellow seed highlight background -->
+  <rect x="195" y="382" width="161" height="176" fill="#FFF4CC" rx="2"/>
+
+  <!-- UTR matrix: cols 1-20 then ... then 3998-4000 -->
+  <!-- cell: 23 wide, 18 tall -->
+  <!-- start x=88, end x=552 for 20 cols. After that, "..." then padding -->
+
+  <!-- UTR grid background -->
+  <g stroke="#999" stroke-width="0.6" fill="none">
+    <rect x="88" y="382" width="460" height="80"/>
+    <line x1="88" y1="402" x2="548" y2="402"/>
+    <line x1="88" y1="422" x2="548" y2="422"/>
+    <line x1="88" y1="442" x2="548" y2="442"/>
+  </g>
+  <!-- vertical grid lines for UTR -->
+  <g stroke="#bbb" stroke-width="0.4">
+    <line x1="111" y1="382" x2="111" y2="462"/><line x1="134" y1="382" x2="134" y2="462"/>
+    <line x1="157" y1="382" x2="157" y2="462"/><line x1="180" y1="382" x2="180" y2="462"/>
+    <line x1="203" y1="382" x2="203" y2="462"/><line x1="226" y1="382" x2="226" y2="462"/>
+    <line x1="249" y1="382" x2="249" y2="462"/><line x1="272" y1="382" x2="272" y2="462"/>
+    <line x1="295" y1="382" x2="295" y2="462"/><line x1="318" y1="382" x2="318" y2="462"/>
+    <line x1="341" y1="382" x2="341" y2="462"/><line x1="364" y1="382" x2="364" y2="462"/>
+    <line x1="387" y1="382" x2="387" y2="462"/><line x1="410" y1="382" x2="410" y2="462"/>
+    <line x1="433" y1="382" x2="433" y2="462"/><line x1="456" y1="382" x2="456" y2="462"/>
+    <line x1="479" y1="382" x2="479" y2="462"/><line x1="502" y1="382" x2="502" y2="462"/>
+    <line x1="525" y1="382" x2="525" y2="462"/>
+  </g>
+
+  <!-- UTR row labels with curly brace -->
+  <g font-family="'Courier New', monospace" font-size="11" font-weight="700" text-anchor="middle">
+    <text x="76" y="397" fill="#4CAF50">A</text>
+    <text x="76" y="417" fill="#FF9800">C</text>
+    <text x="76" y="437" fill="#E91E63">G</text>
+    <text x="76" y="457" fill="#CDDC39">U</text>
+  </g>
+  <!-- curly bracket UTR -->
+  <path d="M 60 384 Q 52 384 52 392 L 52 416 Q 52 422 46 422 Q 52 422 52 428 L 52 452 Q 52 460 60 460"
+        fill="none" stroke="#333" stroke-width="1.2"/>
+  <text x="35" y="426" font-size="11" font-weight="700" fill="#222" text-anchor="end">UTR</text>
+
+  <!-- UTR one-hot cells: GGAGACGCUAGGUUGCGUUC ... -->
+  <!-- A=row1 y=384-402, C=row2 404-422, G=row3 424-442, U=row4 444-462 -->
+  <!-- col_x = 88 + i*23 -->
+  <g>
+    <!-- col 1: G -->
+    <rect x="89" y="425" width="21" height="16" fill="#E91E63" opacity="0.9"/>
+    <!-- col 2: G -->
+    <rect x="112" y="425" width="21" height="16" fill="#E91E63" opacity="0.9"/>
+    <!-- col 3: A -->
+    <rect x="135" y="385" width="21" height="16" fill="#4CAF50" opacity="0.9"/>
+    <!-- col 4: G -->
+    <rect x="158" y="425" width="21" height="16" fill="#E91E63" opacity="0.9"/>
+    <!-- col 5: A -->
+    <rect x="181" y="385" width="21" height="16" fill="#4CAF50" opacity="0.9"/>
+    <!-- col 6: C -->
+    <rect x="204" y="405" width="21" height="16" fill="#FF9800" opacity="0.9"/>
+    <!-- col 7: G -->
+    <rect x="227" y="425" width="21" height="16" fill="#E91E63" opacity="0.9"/>
+    <!-- col 8: C -->
+    <rect x="250" y="405" width="21" height="16" fill="#FF9800" opacity="0.9"/>
+    <!-- col 9: U -->
+    <rect x="273" y="445" width="21" height="16" fill="#CDDC39" opacity="0.9"/>
+    <!-- col 10: A -->
+    <rect x="296" y="385" width="21" height="16" fill="#4CAF50" opacity="0.9"/>
+    <!-- col 11: G -->
+    <rect x="319" y="425" width="21" height="16" fill="#E91E63" opacity="0.9"/>
+    <!-- col 12: G -->
+    <rect x="342" y="425" width="21" height="16" fill="#E91E63" opacity="0.9"/>
+    <!-- col 13: U -->
+    <rect x="365" y="445" width="21" height="16" fill="#CDDC39" opacity="0.9"/>
+    <!-- col 14: U -->
+    <rect x="388" y="445" width="21" height="16" fill="#CDDC39" opacity="0.9"/>
+    <!-- col 15: G -->
+    <rect x="411" y="425" width="21" height="16" fill="#E91E63" opacity="0.9"/>
+    <!-- col 16: C -->
+    <rect x="434" y="405" width="21" height="16" fill="#FF9800" opacity="0.9"/>
+    <!-- col 17: G -->
+    <rect x="457" y="425" width="21" height="16" fill="#E91E63" opacity="0.9"/>
+    <!-- col 18: U -->
+    <rect x="480" y="445" width="21" height="16" fill="#CDDC39" opacity="0.9"/>
+    <!-- col 19: U -->
+    <rect x="503" y="445" width="21" height="16" fill="#CDDC39" opacity="0.9"/>
+    <!-- col 20: C -->
+    <rect x="526" y="405" width="21" height="16" fill="#FF9800" opacity="0.9"/>
+  </g>
+
+  <!-- dots between -->
+  <text x="585" y="427" font-size="16" font-weight="700" fill="#888" text-anchor="middle">···</text>
+
+  <!-- zero-padding grid (UTR, 3 empty cols) -->
+  <g stroke="#999" stroke-width="0.6" fill="none">
+    <rect x="618" y="382" width="69" height="80"/>
+    <line x1="618" y1="402" x2="687" y2="402"/>
+    <line x1="618" y1="422" x2="687" y2="422"/>
+    <line x1="618" y1="442" x2="687" y2="442"/>
+    <line x1="641" y1="382" x2="641" y2="462"/>
+    <line x1="664" y1="382" x2="664" y2="462"/>
+  </g>
+
+  <!-- miRNA matrix (below) -->
+  <g stroke="#999" stroke-width="0.6" fill="none">
+    <rect x="88" y="478" width="460" height="80"/>
+    <line x1="88" y1="498" x2="548" y2="498"/>
+    <line x1="88" y1="518" x2="548" y2="518"/>
+    <line x1="88" y1="538" x2="548" y2="538"/>
+  </g>
+  <g stroke="#bbb" stroke-width="0.4">
+    <line x1="111" y1="478" x2="111" y2="558"/><line x1="134" y1="478" x2="134" y2="558"/>
+    <line x1="157" y1="478" x2="157" y2="558"/><line x1="180" y1="478" x2="180" y2="558"/>
+    <line x1="203" y1="478" x2="203" y2="558"/><line x1="226" y1="478" x2="226" y2="558"/>
+    <line x1="249" y1="478" x2="249" y2="558"/><line x1="272" y1="478" x2="272" y2="558"/>
+    <line x1="295" y1="478" x2="295" y2="558"/><line x1="318" y1="478" x2="318" y2="558"/>
+    <line x1="341" y1="478" x2="341" y2="558"/><line x1="364" y1="478" x2="364" y2="558"/>
+    <line x1="387" y1="478" x2="387" y2="558"/><line x1="410" y1="478" x2="410" y2="558"/>
+    <line x1="433" y1="478" x2="433" y2="558"/><line x1="456" y1="478" x2="456" y2="558"/>
+    <line x1="479" y1="478" x2="479" y2="558"/><line x1="502" y1="478" x2="502" y2="558"/>
+    <line x1="525" y1="478" x2="525" y2="558"/>
+  </g>
+
+  <g font-family="'Courier New', monospace" font-size="11" font-weight="700" text-anchor="middle">
+    <text x="76" y="493" fill="#4CAF50">A</text>
+    <text x="76" y="513" fill="#FF9800">C</text>
+    <text x="76" y="533" fill="#E91E63">G</text>
+    <text x="76" y="553" fill="#CDDC39">U</text>
+  </g>
+  <path d="M 60 480 Q 52 480 52 488 L 52 512 Q 52 518 46 518 Q 52 518 52 524 L 52 548 Q 52 556 60 556"
+        fill="none" stroke="#333" stroke-width="1.2"/>
+  <text x="35" y="522" font-size="11" font-weight="700" fill="#222" text-anchor="end">miRNA</text>
+
+  <!-- miRNA cells: UGAGGUAGUUCCAACGAGGUU... -->
+  <g>
+    <rect x="89" y="541" width="21" height="16" fill="#CDDC39" opacity="0.9"/> <!-- U -->
+    <rect x="112" y="521" width="21" height="16" fill="#E91E63" opacity="0.9"/> <!-- G -->
+    <rect x="135" y="481" width="21" height="16" fill="#4CAF50" opacity="0.9"/> <!-- A -->
+    <rect x="158" y="521" width="21" height="16" fill="#E91E63" opacity="0.9"/> <!-- G -->
+    <rect x="181" y="521" width="21" height="16" fill="#E91E63" opacity="0.9"/> <!-- G -->
+    <rect x="204" y="541" width="21" height="16" fill="#CDDC39" opacity="0.9"/> <!-- U -->
+    <rect x="227" y="481" width="21" height="16" fill="#4CAF50" opacity="0.9"/> <!-- A -->
+    <rect x="250" y="521" width="21" height="16" fill="#E91E63" opacity="0.9"/> <!-- G -->
+    <rect x="273" y="541" width="21" height="16" fill="#CDDC39" opacity="0.9"/> <!-- U -->
+    <rect x="296" y="541" width="21" height="16" fill="#CDDC39" opacity="0.9"/> <!-- U -->
+    <rect x="319" y="501" width="21" height="16" fill="#FF9800" opacity="0.9"/> <!-- C -->
+    <rect x="342" y="501" width="21" height="16" fill="#FF9800" opacity="0.9"/> <!-- C -->
+    <rect x="365" y="481" width="21" height="16" fill="#4CAF50" opacity="0.9"/> <!-- A -->
+    <rect x="388" y="481" width="21" height="16" fill="#4CAF50" opacity="0.9"/> <!-- A -->
+    <rect x="411" y="501" width="21" height="16" fill="#FF9800" opacity="0.9"/> <!-- C -->
+    <rect x="434" y="521" width="21" height="16" fill="#E91E63" opacity="0.9"/> <!-- G -->
+    <rect x="457" y="481" width="21" height="16" fill="#4CAF50" opacity="0.9"/> <!-- A -->
+    <rect x="480" y="521" width="21" height="16" fill="#E91E63" opacity="0.9"/> <!-- G -->
+    <rect x="503" y="521" width="21" height="16" fill="#E91E63" opacity="0.9"/> <!-- G -->
+    <rect x="526" y="541" width="21" height="16" fill="#CDDC39" opacity="0.9"/> <!-- U -->
+  </g>
+
+  <!-- miRNA continues 5 more cols then end -->
+  <text x="585" y="523" font-size="16" font-weight="700" fill="#888" text-anchor="middle">···</text>
+  <g stroke="#999" stroke-width="0.6" fill="none">
+    <rect x="618" y="478" width="69" height="80"/>
+    <line x1="618" y1="498" x2="687" y2="498"/>
+    <line x1="618" y1="518" x2="687" y2="518"/>
+    <line x1="618" y1="538" x2="687" y2="538"/>
+    <line x1="641" y1="478" x2="641" y2="558"/>
+    <line x1="664" y1="478" x2="664" y2="558"/>
+  </g>
+  <!-- miRNA last 3 cells: ...UAU -->
+  <g>
+    <rect x="619" y="541" width="21" height="16" fill="#CDDC39" opacity="0.9"/> <!-- U -->
+    <rect x="642" y="481" width="21" height="16" fill="#4CAF50" opacity="0.9"/> <!-- A -->
+    <rect x="665" y="541" width="21" height="16" fill="#CDDC39" opacity="0.9"/> <!-- U -->
+  </g>
+
+  <!-- position numbers below matrix -->
+  <g font-size="9" fill="#2E78C4" text-anchor="middle">
+    <text x="99" y="574">1</text><text x="190" y="574">5</text>
+    <text x="305" y="574">10</text><text x="420" y="574">15</text>
+    <text x="535" y="574">20</text>
+    <text x="629" y="574">3998</text><text x="675" y="574">4000</text>
+  </g>
+
+  <!-- bracket "Extended Seed Match" -->
+  <path d="M 195 590 L 195 597 L 356 597 L 356 590" fill="none" stroke="#333" stroke-width="1"/>
+  <line x1="275" y1="597" x2="275" y2="604" stroke="#333" stroke-width="1"/>
+  <text x="275" y="617" font-size="11" fill="#222" text-anchor="middle">any-7mer seed match</text>
+
+  <!-- bracket "Zero-padding" -->
+  <path d="M 618 590 L 618 597 L 687 597 L 687 590" fill="none" stroke="#333" stroke-width="1"/>
+  <line x1="652" y1="597" x2="652" y2="604" stroke="#333" stroke-width="1"/>
+  <text x="652" y="617" font-size="11" fill="#222" text-anchor="middle">zero-padding</text>
+
+  <!-- Panel A bottom caption -->
+  <text x="30" y="660" font-size="11" fill="#222">
+    <tspan font-weight="700">UTR window:</tspan> 4 × 4000 (centered on earliest 7mer match · 94.3% anchor hit · falls back to 5' end if no match)
+  </text>
+  <text x="30" y="678" font-size="11" fill="#222">
+    <tspan font-weight="700">miRNA:</tspan> 4 × 26 (padded) · <tspan font-weight="700">cell ID:</tspan> ℤ · <tspan font-weight="700">TargetScan features:</tspan> ℝ⁵
+  </text>
+
+  <!-- nucleotide color key -->
+  <g transform="translate(30, 700)" font-size="10" fill="#222">
+    <text x="0" y="0" font-weight="700">Nucleotide colors:</text>
+    <rect x="115" y="-9" width="14" height="12" fill="#4CAF50" opacity="0.9"/><text x="133" y="0">A</text>
+    <rect x="150" y="-9" width="14" height="12" fill="#FF9800" opacity="0.9"/><text x="168" y="0">C</text>
+    <rect x="185" y="-9" width="14" height="12" fill="#E91E63" opacity="0.9"/><text x="203" y="0">G</text>
+    <rect x="220" y="-9" width="14" height="12" fill="#CDDC39" opacity="0.9"/><text x="238" y="0">U</text>
+  </g>
+
+  <!-- ============== PANEL B ============== -->
+  <line x1="755" y1="20" x2="755" y2="1020" stroke="#ddd" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <text x="775" y="38" font-size="17" font-weight="700" fill="#222">(B) Model Architecture</text>
+  <text x="775" y="56" font-size="10" fill="#777">V3 baseline · <tspan fill="#D32F2F" font-weight="700">V4 additions in red</tspan></text>
+
+  <!-- Three input boxes -->
+  <!-- miRNA input -->
+  <rect x="790" y="80" width="130" height="42" fill="white" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="855" y="98" font-size="11" font-weight="700" fill="#222" text-anchor="middle">miRNA</text>
+  <text x="855" y="113" font-family="'Courier New', monospace" font-size="10" fill="#222" text-anchor="middle">4 × 26</text>
+
+  <!-- UTR input -->
+  <rect x="1010" y="80" width="160" height="42" fill="white" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="1090" y="98" font-size="11" font-weight="700" fill="#222" text-anchor="middle">UTR window</text>
+  <text x="1090" y="113" font-family="'Courier New', monospace" font-size="10" fill="#222" text-anchor="middle">4 × 4000</text>
+
+  <!-- cell + feat input -->
+  <rect x="1280" y="80" width="170" height="42" fill="white" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="1365" y="98" font-size="11" font-weight="700" fill="#222" text-anchor="middle">cell ID + TargetScan</text>
+  <text x="1365" y="113" font-family="'Courier New', monospace" font-size="10" fill="#222" text-anchor="middle">ℤ + ℝ⁵</text>
+
+  <!-- ===== miRNA pipeline ===== -->
+  <line x1="855" y1="122" x2="855" y2="148" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="790" y="148" width="130" height="34" fill="#DCEBF8" stroke="#5891C7" stroke-width="1.2" rx="3"/>
+  <text x="855" y="169" font-size="11" fill="#222" text-anchor="middle">Conv1D [k=7, 32]</text>
+
+  <line x1="855" y1="182" x2="855" y2="200" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="790" y="200" width="130" height="34" fill="#DCEBF8" stroke="#5891C7" stroke-width="1.2" rx="3"/>
+  <text x="855" y="221" font-size="11" fill="#222" text-anchor="middle">Conv1D [k=5, 64]</text>
+
+  <line x1="855" y1="234" x2="855" y2="252" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="790" y="252" width="130" height="34" fill="#DCEBF8" stroke="#5891C7" stroke-width="1.2" rx="3"/>
+  <text x="855" y="273" font-size="11" fill="#222" text-anchor="middle">AdaptiveAvgPool</text>
+
+  <line x1="855" y1="286" x2="855" y2="310" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <text x="855" y="325" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#2E78C4" text-anchor="middle">m ∈ ℝ⁶⁴</text>
+
+  <!-- ===== UTR pipeline (ConvNeXt) ===== -->
+  <line x1="1090" y1="122" x2="1090" y2="148" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+
+  <!-- V4 ConvNeXt label arrow -->
+  <text x="1185" y="138" font-size="10" font-weight="700" fill="#D32F2F">V4: ConvNeXt-1D (~1.6 M params)</text>
+
+  <rect x="1010" y="148" width="160" height="34" fill="#DCEBF8" stroke="#5891C7" stroke-width="1.2" rx="3"/>
+  <text x="1090" y="169" font-size="11" fill="#222" text-anchor="middle">Stem Conv1D [k=7, /2]</text>
+
+  <line x1="1090" y1="182" x2="1090" y2="200" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="1010" y="200" width="160" height="36" fill="#DCEBF8" stroke="#5891C7" stroke-width="1.5" rx="3"/>
+  <text x="1090" y="223" font-size="11" font-weight="600" fill="#222" text-anchor="middle">ConvNeXt block × 3</text>
+  <text x="1180" y="223" font-family="'Courier New', monospace" font-size="10" fill="#2E78C4">d = 64</text>
+  <!-- skip connection on right -->
+  <path d="M 1170 218 Q 1192 218 1192 230 L 1192 248 Q 1192 254 1180 254" fill="none" stroke="#333" stroke-width="1" marker-end="url(#arr)"/>
+  <text x="1198" y="246" font-size="13" font-weight="700" fill="#333">⊕</text>
+
+  <line x1="1090" y1="236" x2="1090" y2="252" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <text x="1090" y="266" font-size="10" fill="#888" text-anchor="middle">↓ stride 2</text>
+
+  <line x1="1090" y1="270" x2="1090" y2="284" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="1010" y="284" width="160" height="36" fill="#DCEBF8" stroke="#5891C7" stroke-width="1.5" rx="3"/>
+  <text x="1090" y="307" font-size="11" font-weight="600" fill="#222" text-anchor="middle">ConvNeXt block × 3</text>
+  <text x="1180" y="307" font-family="'Courier New', monospace" font-size="10" fill="#2E78C4">d = 128</text>
+  <path d="M 1170 302 Q 1192 302 1192 314 L 1192 332 Q 1192 338 1180 338" fill="none" stroke="#333" stroke-width="1" marker-end="url(#arr)"/>
+  <text x="1198" y="330" font-size="13" font-weight="700" fill="#333">⊕</text>
+
+  <line x1="1090" y1="320" x2="1090" y2="336" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <text x="1090" y="350" font-size="10" fill="#888" text-anchor="middle">↓ stride 2</text>
+
+  <line x1="1090" y1="354" x2="1090" y2="368" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="1010" y="368" width="160" height="36" fill="#DCEBF8" stroke="#5891C7" stroke-width="1.5" rx="3"/>
+  <text x="1090" y="391" font-size="11" font-weight="600" fill="#222" text-anchor="middle">ConvNeXt block × 6</text>
+  <text x="1180" y="391" font-family="'Courier New', monospace" font-size="10" fill="#2E78C4">d = 192</text>
+  <path d="M 1170 386 Q 1192 386 1192 398 L 1192 416 Q 1192 422 1180 422" fill="none" stroke="#333" stroke-width="1" marker-end="url(#arr)"/>
+  <text x="1198" y="414" font-size="13" font-weight="700" fill="#333">⊕</text>
+
+  <line x1="1090" y1="404" x2="1090" y2="420" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <text x="1090" y="434" font-size="10" fill="#888" text-anchor="middle">↓ stride 2</text>
+
+  <line x1="1090" y1="438" x2="1090" y2="452" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="1010" y="452" width="160" height="36" fill="#DCEBF8" stroke="#5891C7" stroke-width="1.5" rx="3"/>
+  <text x="1090" y="475" font-size="11" font-weight="600" fill="#222" text-anchor="middle">ConvNeXt block × 2</text>
+  <text x="1180" y="475" font-family="'Courier New', monospace" font-size="10" fill="#2E78C4">d = 256</text>
+  <path d="M 1170 470 Q 1192 470 1192 482 L 1192 500 Q 1192 506 1180 506" fill="none" stroke="#333" stroke-width="1" marker-end="url(#arr)"/>
+  <text x="1198" y="498" font-size="13" font-weight="700" fill="#333">⊕</text>
+
+  <line x1="1090" y1="488" x2="1090" y2="510" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <text x="1090" y="525" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#2E78C4" text-anchor="middle">U ∈ ℝ²⁵⁶ × L</text>
+
+  <!-- ===== Cell pipeline ===== -->
+  <line x1="1365" y1="122" x2="1365" y2="148" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="1280" y="148" width="170" height="34" fill="#DCEBF8" stroke="#5891C7" stroke-width="1.2" rx="3"/>
+  <text x="1365" y="169" font-size="11" fill="#222" text-anchor="middle">Embed(n_cell, 32)</text>
+
+  <line x1="1365" y1="182" x2="1365" y2="200" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="1280" y="200" width="170" height="34" fill="#DCEBF8" stroke="#5891C7" stroke-width="1.2" rx="3"/>
+  <text x="1365" y="221" font-size="11" fill="#222" text-anchor="middle">MLP(5 → 16)</text>
+
+  <line x1="1365" y1="234" x2="1365" y2="252" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <text x="1365" y="270" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#2E78C4" text-anchor="middle">c ∈ ℝ³²,  t ∈ ℝ¹⁶</text>
+
+  <!-- ===== FiLM merge (UTR + cell c) ===== -->
+  <line x1="1090" y1="535" x2="1090" y2="560" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <!-- cell c goes down then left into FiLM -->
+  <path d="M 1340 280 L 1340 575 L 1245 575" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <text x="1295" y="568" font-size="10" font-style="italic" fill="#777">γ, β = MLP(c)</text>
+
+  <rect x="990" y="560" width="250" height="40" fill="#FFF4CC" stroke="#E0A82E" stroke-width="1.6" rx="4"/>
+  <text x="1115" y="578" font-size="12" font-weight="700" fill="#222" text-anchor="middle">FiLM cell injection</text>
+  <text x="1115" y="593" font-family="'Courier New', monospace" font-size="10" fill="#222" text-anchor="middle">U' = (1 + γ) ⊙ U + β</text>
+
+  <!-- aux head V4 only -->
+  <line x1="1240" y1="580" x2="1280" y2="580" stroke="#D32F2F" stroke-width="1.4" stroke-dasharray="4,3" marker-end="url(#arrRed)"/>
+  <rect x="1280" y="555" width="170" height="50" fill="white" stroke="#D32F2F" stroke-width="1.4" stroke-dasharray="4,3" rx="4"/>
+  <text x="1365" y="575" font-size="11" font-weight="700" fill="#D32F2F" text-anchor="middle">Aux per-position</text>
+  <text x="1365" y="590" font-size="11" font-weight="700" fill="#D32F2F" text-anchor="middle">seed-match head</text>
+  <text x="1365" y="603" font-size="9" fill="#D32F2F" text-anchor="middle">(V4 only · λ = 0.3)</text>
+
+  <line x1="1115" y1="600" x2="1115" y2="625" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+
+  <!-- ===== Attention pool ===== -->
+  <!-- m flows from miRNA pipeline -->
+  <path d="M 855 330 L 855 645 L 990 645" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+  <text x="870" y="635" font-size="10" font-style="italic" fill="#777">query m</text>
+
+  <rect x="990" y="625" width="250" height="40" fill="#DCEBF8" stroke="#5891C7" stroke-width="1.4" rx="4"/>
+  <text x="1115" y="643" font-size="12" font-weight="700" fill="#222" text-anchor="middle">miRNA-conditioned attention pool</text>
+  <text x="1115" y="658" font-family="'Courier New', monospace" font-size="10" fill="#222" text-anchor="middle">attn(m, U') → u ∈ ℝ²⁵⁶</text>
+
+  <line x1="1115" y1="665" x2="1115" y2="688" stroke="#333" stroke-width="1.3" marker-end="url(#arr)"/>
+
+  <!-- Concat box (bring m, c, t down via gray paths) -->
+  <path d="M 855 645 L 855 705 L 992 705" fill="none" stroke="#aaa" stroke-width="0.8" marker-end="url(#arr)"/>
+  <path d="M 1365 280 L 1365 705 L 1238 705" fill="none" stroke="#aaa" stroke-width="0.8" marker-end="url(#arr)"/>
+
+  <rect x="990" y="688" width="250" height="56" fill="white" stroke="#333" stroke-width="1.2" rx="4"/>
+  <text x="1115" y="707" font-size="11" font-weight="700" fill="#222" text-anchor="middle">concat [ m ; u ; c ; t ]</text>
+  <text x="1115" y="723" font-family="'Courier New', monospace" font-size="10" fill="#222" text-anchor="middle">Linear(256) → ReLU → Dropout(0.3)</text>
+  <text x="1115" y="737" font-family="'Courier New', monospace" font-size="10" fill="#222" text-anchor="middle">→ Linear(1) → σ</text>
+
+  <line x1="1115" y1="744" x2="1115" y2="772" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Output box -->
+  <rect x="970" y="772" width="290" height="46" fill="#FFE0B2" stroke="#E67E22" stroke-width="1.8" rx="5"/>
+  <text x="1115" y="792" font-size="12" font-weight="700" fill="#222" text-anchor="middle">P( deep repression | miRNA, UTR, cell )</text>
+  <text x="1115" y="808" font-size="9" font-style="italic" fill="#666" text-anchor="middle">cell-type-aware MTI prediction</text>
+
+  <text x="1115" y="836" font-size="11" font-weight="700" fill="#222" text-anchor="middle">Output</text>
+
+  <!-- Legend at bottom of panel B -->
+  <g transform="translate(775, 870)" font-size="10" fill="#222">
+    <rect x="0" y="0" width="18" height="14" fill="#DCEBF8" stroke="#5891C7" stroke-width="1.2" rx="2"/>
+    <text x="24" y="11">trainable layer</text>
+    <rect x="130" y="0" width="18" height="14" fill="#FFF4CC" stroke="#E0A82E" stroke-width="1.5" rx="2"/>
+    <text x="154" y="11">FiLM (cell injection)</text>
+    <rect x="290" y="0" width="18" height="14" fill="white" stroke="#D32F2F" stroke-width="1.4" stroke-dasharray="3,2" rx="2"/>
+    <text x="314" y="11">V4 only (aux head)</text>
+    <rect x="450" y="0" width="18" height="14" fill="#FFE0B2" stroke="#E67E22" stroke-width="1.5" rx="2"/>
+    <text x="474" y="11">output</text>
+  </g>
+
+</svg>

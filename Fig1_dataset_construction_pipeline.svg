@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" font-family="Helvetica, Arial, sans-serif">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#FAFBFC"/>
+
+  <!-- ============================================ -->
+  <!-- Left vertical section bars (like reference) -->
+  <!-- ============================================ -->
+  <!-- Bar 1: Data Sources -->
+  <rect x="20" y="70" width="32" height="160" fill="#9CA3AF"/>
+  <text x="36" y="150" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff"
+        transform="rotate(-90, 36, 150)">Data Sources</text>
+
+  <!-- Bar 2: Integration Pipeline -->
+  <rect x="20" y="240" width="32" height="440" fill="#9CA3AF"/>
+  <text x="36" y="460" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff"
+        transform="rotate(-90, 36, 460)">Integration Pipeline</text>
+
+  <!-- Bar 3: Final Dataset -->
+  <rect x="20" y="690" width="32" height="120" fill="#9CA3AF"/>
+  <text x="36" y="750" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff"
+        transform="rotate(-90, 36, 750)">Final Dataset</text>
+
+  <!-- ============================================ -->
+  <!-- Title -->
+  <!-- ============================================ -->
+  <text x="620" y="40" text-anchor="middle" font-size="17" font-weight="bold" fill="#1F2937">
+    Fig 1 — Dataset construction pipeline
+  </text>
+
+  <!-- ============================================ -->
+  <!-- 5 Data Source Boxes (top row) -->
+  <!-- Available width: 70 to 1170 = 1100, 5 boxes -->
+  <!-- ============================================ -->
+
+  <!-- Source 1: GSE138266 -->
+  <g>
+    <rect x="75" y="85" width="205" height="130" rx="6" ry="6"
+          fill="#DBEAFE" stroke="#1E40AF" stroke-width="1.5"/>
+    <text x="177" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">GSE138266</text>
+    <line x1="105" y1="120" x2="250" y2="120" stroke="#93C5FD" stroke-width="1"/>
+    <text x="177" y="145" text-anchor="middle" font-size="11" fill="#1F2937">scRNA-seq</text>
+    <text x="177" y="163" text-anchor="middle" font-size="11" fill="#1F2937">768 cells · 16 types</text>
+    <text x="177" y="200" text-anchor="middle" font-size="9" font-style="italic" fill="#6B7280">Schafflick et al., 2020</text>
+  </g>
+
+  <!-- Source 2: miTEA-HiRes -->
+  <g>
+    <rect x="295" y="85" width="205" height="130" rx="6" ry="6"
+          fill="#DBEAFE" stroke="#1E40AF" stroke-width="1.5"/>
+    <text x="397" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">miTEA-HiRes</text>
+    <line x1="325" y1="120" x2="470" y2="120" stroke="#93C5FD" stroke-width="1"/>
+    <text x="397" y="145" text-anchor="middle" font-size="11" fill="#1F2937">mHG p-value</text>
+    <text x="397" y="163" text-anchor="middle" font-size="11" fill="#1F2937">per (miRNA, cell)</text>
+    <text x="397" y="200" text-anchor="middle" font-size="9" font-style="italic" fill="#6B7280">Herbst et al., 2025</text>
+  </g>
+
+  <!-- Source 3: miRTarBase 2025 -->
+  <g>
+    <rect x="515" y="85" width="205" height="130" rx="6" ry="6"
+          fill="#DBEAFE" stroke="#1E40AF" stroke-width="1.5"/>
+    <text x="617" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">miRTarBase 2025</text>
+    <line x1="545" y1="120" x2="690" y2="120" stroke="#93C5FD" stroke-width="1"/>
+    <text x="617" y="145" text-anchor="middle" font-size="11" fill="#1F2937">validated human</text>
+    <text x="617" y="163" text-anchor="middle" font-size="11" fill="#1F2937">MTIs</text>
+    <text x="617" y="200" text-anchor="middle" font-size="9" font-style="italic" fill="#6B7280">Cui et al., 2025</text>
+  </g>
+
+  <!-- Source 4: Ensembl -->
+  <g>
+    <rect x="735" y="85" width="205" height="130" rx="6" ry="6"
+          fill="#DBEAFE" stroke="#1E40AF" stroke-width="1.5"/>
+    <text x="837" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">Ensembl GRCh38.115</text>
+    <line x1="765" y1="120" x2="910" y2="120" stroke="#93C5FD" stroke-width="1"/>
+    <text x="837" y="145" text-anchor="middle" font-size="11" fill="#1F2937">3'UTR sequences</text>
+    <text x="837" y="163" text-anchor="middle" font-size="11" fill="#1F2937">(principal isoform)</text>
+    <text x="837" y="200" text-anchor="middle" font-size="9" font-style="italic" fill="#6B7280">—</text>
+  </g>
+
+  <!-- Source 5: miRBase -->
+  <g>
+    <rect x="955" y="85" width="205" height="130" rx="6" ry="6"
+          fill="#DBEAFE" stroke="#1E40AF" stroke-width="1.5"/>
+    <text x="1057" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">miRBase</text>
+    <line x1="985" y1="120" x2="1130" y2="120" stroke="#93C5FD" stroke-width="1"/>
+    <text x="1057" y="145" text-anchor="middle" font-size="11" fill="#1F2937">mature miRNA</text>
+    <text x="1057" y="163" text-anchor="middle" font-size="11" fill="#1F2937">sequences</text>
+    <text x="1057" y="200" text-anchor="middle" font-size="9" font-style="italic" fill="#6B7280">—</text>
+  </g>
+
+  <!-- Convergence arrows from each source to step 1 -->
+  <defs>
+    <marker id="arrowGray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#6B7280"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#C2410C"/>
+    </marker>
+    <marker id="arrowDark" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,8 L11,4 z" fill="#1F2937"/>
+    </marker>
+  </defs>
+
+  <g stroke="#6B7280" stroke-width="1.3" fill="none" stroke-dasharray="4,3" marker-end="url(#arrowGray)">
+    <path d="M 177 215 Q 177 240 460 268"/>
+    <path d="M 397 215 Q 397 240 480 268"/>
+    <path d="M 617 215 L 617 268"/>
+    <path d="M 837 215 Q 837 240 750 268"/>
+    <path d="M 1057 215 Q 1057 240 770 268"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- 4-Step Integration Pipeline (centered) -->
+  <!-- Box width 540, height 70, centered at x=620 -->
+  <!-- ============================================ -->
+
+  <!-- Step 1 -->
+  <g>
+    <rect x="350" y="275" width="540" height="68" rx="6" ry="6"
+          fill="#FED7AA" stroke="#C2410C" stroke-width="1.5"/>
+    <circle cx="380" cy="309" r="16" fill="#C2410C"/>
+    <text x="380" y="314" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">1</text>
+    <text x="408" y="303" font-size="13" font-weight="bold" fill="#7C2D12">Cartesian product</text>
+    <text x="408" y="322" font-size="11" fill="#1F2937">All (miRNA × UTR × cell) triples</text>
+    <text x="870" y="322" text-anchor="end" font-size="10.5" font-style="italic" fill="#7C2D12">≈ 10¹⁰ triples</text>
+  </g>
+
+  <!-- Arrow 1->2 -->
+  <line x1="620" y1="343" x2="620" y2="368" stroke="#C2410C" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <!-- Step 2 -->
+  <g>
+    <rect x="350" y="375" width="540" height="68" rx="6" ry="6"
+          fill="#FED7AA" stroke="#C2410C" stroke-width="1.5"/>
+    <circle cx="380" cy="409" r="16" fill="#C2410C"/>
+    <text x="380" y="414" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+    <text x="408" y="403" font-size="13" font-weight="bold" fill="#7C2D12">Active context filter</text>
+    <text x="408" y="422" font-size="11" fill="#1F2937">Keep triples with mHG p &lt; 0.05</text>
+    <text x="870" y="422" text-anchor="end" font-size="10.5" font-style="italic" fill="#7C2D12">drops ~95%</text>
+  </g>
+
+  <!-- Arrow 2->3 -->
+  <line x1="620" y1="443" x2="620" y2="468" stroke="#C2410C" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <!-- Step 3 -->
+  <g>
+    <rect x="350" y="475" width="540" height="68" rx="6" ry="6"
+          fill="#FED7AA" stroke="#C2410C" stroke-width="1.5"/>
+    <circle cx="380" cy="509" r="16" fill="#C2410C"/>
+    <text x="380" y="514" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">3</text>
+    <text x="408" y="503" font-size="13" font-weight="bold" fill="#7C2D12">Global sequence dedup</text>
+    <text x="408" y="522" font-size="11" fill="#1F2937">Assign global miRNA / UTR IDs</text>
+    <text x="870" y="522" text-anchor="end" font-size="10.5" font-style="italic" fill="#7C2D12">2,503 / 11,897</text>
+  </g>
+
+  <!-- Arrow 3->4 -->
+  <line x1="620" y1="543" x2="620" y2="568" stroke="#C2410C" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <!-- Step 4 -->
+  <g>
+    <rect x="350" y="575" width="540" height="68" rx="6" ry="6"
+          fill="#FED7AA" stroke="#C2410C" stroke-width="1.5"/>
+    <circle cx="380" cy="609" r="16" fill="#C2410C"/>
+    <text x="380" y="614" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">4</text>
+    <text x="408" y="603" font-size="13" font-weight="bold" fill="#7C2D12">Label assignment + both-label filter</text>
+    <text x="408" y="622" font-size="11" fill="#1F2937">Rank percentile of mRNA fold change</text>
+    <text x="870" y="622" text-anchor="end" font-size="10.5" font-style="italic" fill="#7C2D12">≈ 3.6 × 10⁷ rows</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- Label definition callout (right side) -->
+  <!-- ============================================ -->
+  <g>
+    <rect x="920" y="475" width="245" height="168" rx="8" ry="8"
+          fill="#DCFCE7" stroke="#15803D" stroke-width="1.8" stroke-dasharray="5,3"/>
+    <text x="1042" y="498" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532D">Label rule</text>
+    <line x1="940" y1="506" x2="1145" y2="506" stroke="#86EFAC" stroke-width="1"/>
+
+    <text x="935" y="525" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#14532D">r &lt; 0.20  →  y = 1</text>
+    <text x="935" y="540" font-size="9.5" font-style="italic" fill="#15803D">    deep repression</text>
+
+    <text x="935" y="562" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#14532D">r &gt; 0.50  →  y = 0</text>
+    <text x="935" y="577" font-size="9.5" font-style="italic" fill="#15803D">    weak repression</text>
+
+    <text x="935" y="599" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#14532D">else      →  discard</text>
+
+    <line x1="940" y1="610" x2="1145" y2="610" stroke="#86EFAC" stroke-width="1"/>
+    <text x="1042" y="628" text-anchor="middle" font-size="9" font-style="italic" fill="#15803D">both-label filter per (miRNA, cell)</text>
+  </g>
+  <!-- Connector callout to Step 4 -->
+  <line x1="890" y1="609" x2="920" y2="559" stroke="#15803D" stroke-width="1.3" stroke-dasharray="4,3"/>
+
+  <!-- Arrow Step 4 -> Final dataset -->
+  <line x1="620" y1="643" x2="620" y2="685" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrowDark)"/>
+
+  <!-- ============================================ -->
+  <!-- Final dataset box -->
+  <!-- ============================================ -->
+  <g>
+    <rect x="75" y="695" width="1085" height="105" rx="8" ry="8"
+          fill="#1F2937" stroke="#000000" stroke-width="1.5"/>
+    <text x="617" y="728" text-anchor="middle" font-size="16" font-weight="bold" fill="#FBBF24">
+      Final dataset  ·  ~ 3.6 × 10⁷ (miRNA, UTR, cell) rows
+    </text>
+    <line x1="350" y1="742" x2="885" y2="742" stroke="#4B5563" stroke-width="1"/>
+    <text x="617" y="765" text-anchor="middle" font-size="12" fill="#E5E7EB">
+      2,503 miRNA   ·   11,897 3'UTR   ·   768 cells (16 types)
+    </text>
+    <text x="617" y="787" text-anchor="middle" font-size="11" font-style="italic" fill="#9CA3AF">
+      positive rate ≈ 0.20
+    </text>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="617" y="838" text-anchor="middle" font-size="10.5" font-style="italic" fill="#6B7280">
+    All downstream splits are derived from this table (see Fig 3, Table 2).
+  </text>
+
+</svg>
