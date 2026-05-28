@@ -5,25 +5,34 @@ Three-axis hold-out diagnosis of the UTR-encoder shortcut in cell-type-aware
 miRNA target prediction.
 
 ## Repository layout
+
 - `script/` — training, evaluation, and plotting scripts
+- `dataset/` — preprocessed parquet chunks (26 chunks × 4 files: samples,
+  miRNA dict, UTR dict, cell dict; ~200 MB total)
+- `cache/` — intermediate cache derived from `dataset/`: train/val/test
+  splits, TargetScan context+ features, seed-anchored windows (~52 MB)
 - `Fig*.svg` — schematic figure sources
 
 ## Quick start
 
-```bash
-# 1. Build cache from raw data (GSE138266 + miRTarBase 2025 + Ensembl + miRBase)
-./script/run_all.sh
+Train the four models (cache is already included in this repo, will be reused):
 
-# 2. Train the four models
+```bash
 ./script/run_all.sh                       # CNN baseline (full)
 ./script/run_mixed_only.sh                # CNN baseline (mixed-only)
 ./script/run_v4.sh                        # ConvNeXt extended (full)
 MIXED_ONLY=1 ./script/run_v4.sh           # ConvNeXt extended (mixed-only)
+```
 
-# 3. TargetScan-LR baseline (~3 min)
+TargetScan-LR baseline (~3 min):
+
+```bash
 python script/train_targetscan_lr_baseline.py
+```
 
-# 4. Reproduce figures
+Reproduce figures:
+
+```bash
 python script/prepare_fig4_data.py
 python script/plot_fig4_dataset.py
 python script/plot_fig42_comparison.py
@@ -38,15 +47,27 @@ python script/plot_fig43_per_cell_heatmap.py \
 python script/plot_threshold_sweep.py
 ```
 
-## Data sources
-- scRNA-seq: GEO accession GSE138266
-- miRNA-target annotations: miRTarBase release 9 (2025)
-- miRNA sequences: miRBase release 22
-- UTR sequences: Ensembl GRCh38 release 115
-- Activity inference: miTEA-HiRes
+## Data preprocessing
 
-Processed cache (~ several GB) is not included; rebuild from raw sources
-using the scripts above.
+The parquet chunks in `dataset/` were derived from the following public sources:
+
+- scRNA-seq: GEO accession GSE138266 (PBMC, 16 immune cell types)
+- miRNA-target annotations: miRTarBase release 9 (2025 update)
+- miRNA sequences: miRBase release 22
+- 3′ UTR sequences: Ensembl GRCh38 release 115
+- miRNA activity inference: miTEA-HiRes (Lukasse et al., 2024)
+
+Preprocessing pipeline (run once, snapshot included in this repo):
+
+1. miTEA-HiRes activity inference per (miRNA, cell) pair
+2. Rank-aware binary labelling (positive: `rank_percentile_low < 0.20`;
+   negative: `rank_percentile_low > 0.50`)
+3. Cross-product with miRTarBase MTI annotations
+4. Chunked output as 26 parquet shards
+
+The included parquet snapshot allows direct training without re-running the
+upstream activity inference step.
 
 ## License
+
 MIT
