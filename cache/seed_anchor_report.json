@@ -1,0 +1,23 @@
+{
+  "seed_rule": "any_7mer",
+  "n_unique_pairs": 12383,
+  "n_seed_anchor_found": 10945,
+  "n_seed_anchor_fallback": 1438,
+  "seed_anchor_hit_rate": 0.8838730517645159,
+  "seed_anchor_fallback_rate": 0.11612694823548408,
+  "targetscan_feature_dim": 5,
+  "targetscan_feature_means": [
+    0.8838730454444885,
+    0.3423271179199219,
+    0.5699889063835144,
+    0.847212016582489,
+    7.90064001083374
+  ],
+  "targetscan_feature_stds": [
+    0.32036471366882324,
+    0.2965832054615021,
+    0.11475275456905365,
+    0.44059517979621887,
+    0.908970057964325
+  ]
+}

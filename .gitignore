@@ -1,7 +1,3 @@
-# Heavy data — rebuilt from raw sources
-cache/
-dataset/
-
 # Model checkpoints (too large for GitHub)
 runs/*/checkpoint_*.pt
 runs/*/best_model*.pt
@@ -15,22 +11,20 @@ runs/*/train_log*.txt
 要求/
 参考文献/
 
-# Paper drafts (FYP not for distribution)
+# Paper drafts
 *.docx
 *.pptx
 paper_*.md
 docs/
 outputs/
 
-# Python cache
+# Python cache / backups / previews
 __pycache__/
 *.pyc
+*.bak
+_fig*_preview.*
 
 # OS / editor
 .DS_Store
 .vscode/
 .idea/
-
-# Backups / previews
-*.bak
-_fig*_preview.*

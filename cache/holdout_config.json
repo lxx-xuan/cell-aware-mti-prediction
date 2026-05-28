@@ -1,0 +1,1 @@
+{"utr_holdout_frac": 0.2, "mirna_holdout_frac": 0.2, "val_utr_frac_of_holdout": 0.3, "holdout_cell_types": ["B1", "Tregs", "mDC1", "plasma"], "val_holdout_cell_types": ["mDC1"], "split_scheme": "three_axis_holdout_v5_12sets"}
